@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: kas-crm-frontend
+    env: node
+    buildCommand: npm install && NODE_OPTIONS='--max-old-space-size=400' npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=400
+      - key: PORT
+        value: 3000
+
