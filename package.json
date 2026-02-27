@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx next dev",
-    "build": "npm install",
+    "dev": "next dev",
+    "build": "next build",
     "build:render": "cross-env NODE_OPTIONS=--max-old-space-size=400 npx next build",
-    "start": "npx next start -p ${PORT:-3000}",
+    "start": "npm start",
     "start:render": "if [ ! -d .next ]; then echo 'Build not found. Please run npm run build first.'; exit 1; fi && npx next start -p ${PORT:-3000}",
     "lint": "npx next lint"
   },
