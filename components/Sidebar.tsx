@@ -215,18 +215,14 @@ export default function Sidebar({ isOpen, onToggle }: SidebarProps) {
             : "w-0 lg:w-16 -translate-x-full lg:translate-x-0 overflow-hidden lg:overflow-visible"
         }`}
       >
-        <div className={`border-b border-gray-700/50 flex items-center ${isOpen ? "justify-between p-3 sm:p-4" : "lg:flex-col lg:py-3 lg:gap-2 lg:px-2"}`}>
-          <Link href="/dashboard" className="flex items-center justify-center min-w-0 flex-1">
-            <div className={`relative rounded-lg overflow-hidden flex-shrink-0 bg-black/20 ${isOpen ? "w-14 h-12 sm:w-16 sm:h-14" : "lg:w-10 lg:h-10"}`}>
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                fill
-                className="object-contain p-1"
-                sizes="(max-width: 640px) 56px, 64px"
-                priority
-              />
-            </div>
+        <div className={`border-b border-gray-700/50 flex items-center ${isOpen ? "justify-between px-4 py-3 sm:px-5 sm:py-4" : "lg:flex-col lg:py-3 lg:gap-2 lg:px-2"}`}>
+          <Link 
+            href="/dashboard"
+            className="flex items-center justify-start"
+          >
+            <span className="text-xl font-semibold tracking-wide">
+              Elevator CRM
+            </span>
           </Link>
           <button
             onClick={onToggle}
@@ -282,15 +278,6 @@ export default function Sidebar({ isOpen, onToggle }: SidebarProps) {
               aria-label="Go to login page"
             >
               <IoOpenOutline className="w-5 h-5" />
-            </button>
-            <button
-              type="button"
-              onClick={handleLogout}
-              className="p-2 rounded-lg text-gray-400 hover:bg-gray-700 hover:text-white transition-colors flex-shrink-0"
-              title="Logout"
-              aria-label="Logout"
-            >
-              <IoLogOut className="w-5 h-5" />
             </button>
             </div>
           ) : (
