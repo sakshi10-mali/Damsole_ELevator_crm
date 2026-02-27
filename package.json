@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:render": "cross-env NODE_OPTIONS=--max-old-space-size=400 npx next build",
-    "start": "npm start",
+    "start": "next start",
     "start:render": "if [ ! -d .next ]; then echo 'Build not found. Please run npm run build first.'; exit 1; fi && npx next start -p ${PORT:-3000}",
     "lint": "npx next lint"
   },
